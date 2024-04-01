@@ -3,7 +3,7 @@ name: Docker Build and Release
 on:
   push:
     branches:
-      - master  # or the name of your default branch
+      - tests  # or the name of your default branch
 
 jobs:
   build_and_release:
