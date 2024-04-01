@@ -1290,8 +1290,8 @@ inline bool JanusMinerOpt::mine_job(MineResult& res, const CandidateBatch& job, 
             if (janushash < job.targetV2) {
                 std::span<const uint8_t, 4> s((const uint8_t*)&nonce, 4);
 
-                // spdlog::info("janushash(header): {}< {}", janushash.to_double(), 1 / job.targetV2.difficulty());
-                // spdlog::info("header: {}", serialize_hex(header));
+                spdlog::info("janushash(header): {}< {}", janushash.to_double(), 1 / job.targetV2.difficulty());
+                spdlog::info("header: {}", serialize_hex(header));
                 // spdlog::info("sha256thash: {}", serialize_hex(dummySha256tHash));
                 auto hs { hashSHA256(hashSHA256(hashSHA256(header))) };
                 // spdlog::info("SHA256(header): {}", serialize_hex(hs));
